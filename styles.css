@@ -1,0 +1,684 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body-class {
+  overflow-y: hidden;
+}
+
+.home-section {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.ham-menu-class {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 58rem;
+  padding: 8px 20px;
+  position: fixed;
+  width: 100%;
+  transform: translateX(-100vw);
+  transition: all 0.4s ease-in-out;
+  top: 53px;
+  z-index: 4;
+}
+
+.ham-menu-class > a {
+  font-size: 18px;
+  font-family: "IBM Plex sans", sans-serif;
+  font-weight: 300;
+  margin: 9px 0;
+}
+
+.main-header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 20px;
+  position: fixed;
+  max-width: 58rem;
+  top: -3px;
+  width: 100%;
+  z-index: 100;
+}
+
+a:hover,
+.navbar > i:hover,
+.navbar > h1:hover {
+  cursor: pointer;
+}
+
+.navbar > i::before {
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.landing-section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 4rem;
+  padding: 4% 0;
+  width: 100%;
+  max-width: 56rem;
+}
+
+.landing-section > div {
+  padding: 3%;
+}
+
+.landing-image-container {
+  padding-top: 54%;
+  position: relative;
+}
+
+.landing-section-images {
+  border-radius: 6px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.landing-headers {
+  background-color: transparent;
+  bottom: 41px;
+  padding: 0 9%;
+  position: relative;
+}
+
+.landing-headers > h1 {
+  background-color: white;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  margin-bottom: 11px;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.landing-headers > h4 {
+  background-color: white;
+  color: #4d4b4b;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 4%;
+  text-align: center;
+}
+
+.commitment-section {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  width: 100%;
+  max-width: 56rem;
+}
+
+.commitment-section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 21px 7% 0;
+}
+
+.commitment-icons {
+  color: #7355ec;
+  /*color: #ec6755;*/
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.commitment-heading {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 31px 0 9px;
+  text-align: center;
+}
+
+.commitment-heading + p,
+.custom-diet-card > p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.pricing-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-section > div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0 3%;
+}
+
+.pricing-section > h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+}
+
+.pricing-card,
+.custom-diet-card {
+  border-radius: 7px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  max-width: 25rem;
+  margin: 3rem 1rem;
+}
+
+.pricing-card-description {
+  padding: 4%;
+  margin: 0 0 0 20px;
+  margin-bottom: 2rem;
+}
+
+.pricing-card-description > h1 {
+  font-size: 31px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.pricing-card-description > h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.pricing-card-price {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.pricing-features-container {
+  height: 19rem;
+}
+
+.pricing-features,
+.pricing-features-pro {
+  display: flex;
+  padding: 4%;
+}
+
+.pricing-features > i::before {
+  color: #0070f3;
+  margin: 0 20px;
+  position: relative;
+  transform: scale(1.3);
+  top: 5px;
+}
+
+.pricing-features-pro > i::before {
+  color: #7928ca;
+  margin: 0 20px;
+  position: relative;
+  top: 5px;
+  transform: scale(1.3);
+}
+
+.pricing-features > p,
+.pricing-features-pro > p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.pricing-div {
+  width: 100%;
+  padding: 1rem 20px 1.7rem;
+}
+
+.pricing-btn-container {
+  align-items: center;
+  background-color: rgb(1, 122, 255);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding: 8px 20px;
+  width: 100%;
+}
+
+.pricing-btn-container-pro {
+  align-items: center;
+  background-color: #7928ca;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding: 8px 20px;
+  width: 100%;
+}
+
+.pricing-btn-container:hover,
+.pricing-btn-container > button:hover,
+.pricing-btn-container-pro > button:hover,
+.custom-btn-container > button:hover {
+  cursor: pointer;
+}
+
+.pricing-btn-container > button,
+.pricing-btn-container-pro > button,
+.custom-btn-container > button {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+  padding: 5px 20px;
+}
+
+.pricing-btn-container > i::before,
+.pricing-btn-container-pro > i::before,
+.custom-btn-container > i::before {
+  color: white;
+}
+
+.social-media-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 7rem;
+  padding: 30px 7% 0;
+  width: 100%;
+}
+
+.social-media-section > ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  padding: 0 2%;
+  width: 100%;
+}
+
+.social-media-section > ul > a {
+  transform: scale(1.5);
+}
+
+.social-media-section > p {
+  color: gray;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-top: 4rem;
+}
+
+.social-media-icons {
+  font-size: 20px;
+}
+
+.bi-twitter {
+  color: #1da1f2;
+}
+
+.bi-facebook {
+  color: #4267b2;
+}
+
+.bi-instagram {
+  color: #e1306c;
+}
+
+.bi-envelope-fill {
+  color: #d44638;
+}
+
+.diet-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+}
+
+.custom-diet-plans {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 3rem 1rem;
+}
+
+.custom-diet-plans > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.custom-diet-plans > div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.custom-diet-plans > div > img {
+  border-radius: 10px;
+  /* height: 70vh; */
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
+  max-height: 60vh;
+}
+
+.custom-diet-card > p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-top: 1rem;
+  padding: 3%;
+  text-align: center;
+}
+
+.custom-diet-card > div:first-child {
+  max-height: 19rem;
+}
+
+.custom-diet-card > div > img {
+  margin-top: 10px;
+  height: 100%;
+  padding: 0 10px;
+  object-fit: cover;
+}
+
+.custom-diet-btn-container {
+  align-items: center;
+  background-color: #7928ca;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  /* bottom: 27px; */
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 20px;
+  /* position: relative; */
+  /* width: 100%; */
+  position: absolute;
+  /* right: 0px; */
+  /* border-top-right-radius: 10px; */
+  /* bottom: 32px; */
+  width: 100%;
+  /* left: 11px; */
+  bottom: 0px;
+}
+
+.custom-btn-container {
+  align-items: center;
+  background-color: rgb(1, 122, 255);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+  width: 100%;
+}
+
+.custom-diet-btn-container > button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.custom-diet-btn-container > i::before {
+  color: white;
+}
+
+/* ID's */
+#brand-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 47px;
+  transition: all 0.1s linear ease-in-out;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 990px) {
+  .navbar {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 20px;
+    position: fixed;
+    max-width: 58rem;
+    top: -3px;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .landing-section {
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 5.6rem 0 0;
+    padding: 4px;
+    width: 100%;
+  }
+
+  .landing-section > div {
+    padding: 3% 3px;
+  }
+
+  .commitment-section {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 7%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .body-class {
+    overflow-y: hidden;
+  }
+
+  .pricing-section > div {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .custom-diet-plans {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0 1rem;
+  }
+
+  .pricing-features-container {
+    height: fit-content;
+  }
+
+  .social-media-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+    padding: 30px 7% 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ham-menu-class {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 4%;
+    position: fixed;
+    width: 100%;
+    transform: translateX(-100vw);
+    transition: all 0.3s ease-in-out;
+    top: 67px;
+    z-index: 4;
+  }
+
+  .display-ham-menu {
+    transform: translateX(0);
+    padding: 0 20px;
+  }
+
+  .home-section {
+    display: flex;
+    flex-direction: column;
+    padding: 9px;
+  }
+
+  .main-nav {
+    align-items: center;
+    background: white;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    justify-content: space-between;
+    padding: 2% 14px;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .nav-links {
+    background: white;
+    bottom: 0;
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px,
+      rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+    display: flex;
+    flex-direction: row;
+    height: 49px;
+    left: 0;
+    justify-content: space-between;
+    position: fixed;
+    padding: 16px 7%;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .nav-links > li > a {
+    bottom: 9px;
+    position: relative;
+  }
+
+  .commitment-section {
+    margin-top: 0;
+  }
+
+  .commitment-section > div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem 0 16px;
+  }
+
+  .commitment-icons {
+    /*color: #ec6755;*/
+    color: #7355ec;
+    font-size: 69px;
+    text-align: center;
+  }
+
+  .commitment-heading {
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin: 17px 0 9px;
+    text-align: center;
+  }
+
+  .commitment-heading + p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .pricing-section > h1,
+  .custom-diet-plans > h1,
+  .diet-heading {
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 40px;
+    padding: 0 7px;
+    text-align: center;
+  }
+
+  .pricing-card {
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-top: 3rem;
+  }
+
+  .custom-diet-plans {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0 1rem;
+  }
+
+  .social-media-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 30px 7% 0;
+    width: 100%;
+  }
+
+  /*ID s*/
+  #brand-name {
+    font-size: 30px;
+  }
+}
+
+/* JS class List */
+
+.display-ham-menu {
+  transform: translateX(0);
+}
+
+.animate-brand {
+  /* color: transparent;
+  background: linear-gradient(#8b00ff, #8b00ff) no-repeat 0 0;
+  background-clip: text;
+  background-size: 0 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  animation: stripes linear 1 forwards;*/
+  color: #7928ca;
+}
+
+@keyframes stripes {
+  to {
+    background-size: 100% 100%;
+  }
+}
